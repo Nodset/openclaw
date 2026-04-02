@@ -2362,6 +2362,13 @@ export const GENERATED_BASE_CONFIG_SCHEMA = {
                     minimum: 0,
                     maximum: 9007199254740991,
                   },
+                  slugGeneratorTimeoutSeconds: {
+                    description:
+                      "Timeout for the LLM-based session slug generation call in seconds. Increase this if your model is slow and slug generation keeps timing out. Default: 15 seconds.",
+                    type: "integer",
+                    exclusiveMinimum: 0,
+                    maximum: 9007199254740991,
+                  },
                 },
                 additionalProperties: false,
               },

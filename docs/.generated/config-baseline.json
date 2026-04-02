@@ -1910,6 +1910,16 @@
       "hasChildren": false
     },
     {
+      "path": "agents.defaults.llm.slugGeneratorTimeoutSeconds",
+      "kind": "core",
+      "type": "integer",
+      "required": false,
+      "deprecated": false,
+      "sensitive": false,
+      "tags": [],
+      "hasChildren": false
+    },
+    {
       "path": "agents.defaults.maxConcurrent",
       "kind": "core",
       "type": "integer",

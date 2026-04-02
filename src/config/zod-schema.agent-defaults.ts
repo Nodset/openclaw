@@ -97,6 +97,14 @@ export const AgentDefaultsSchema = z
           .describe(
             "Idle timeout for LLM streaming responses in seconds. If no token is received within this time, the request is aborted. Set to 0 to disable. Default: 60 seconds.",
           ),
+        slugGeneratorTimeoutSeconds: z
+          .number()
+          .int()
+          .positive()
+          .optional()
+          .describe(
+            "Timeout for the LLM-based session slug generation call in seconds. Increase this if your model is slow and slug generation keeps timing out. Default: 15 seconds.",
+          ),
       })
       .strict()
       .optional(),

@@ -388,4 +388,10 @@ export type AgentLlmConfig = {
    * Default: 60 seconds.
    */
   idleTimeoutSeconds?: number;
+  /**
+   * Timeout for the LLM-based session slug generation call in seconds.
+   * Increase this if your model is slow and slug generation keeps timing out.
+   * Default: 15 seconds.
+   */
+  slugGeneratorTimeoutSeconds?: number;
 };

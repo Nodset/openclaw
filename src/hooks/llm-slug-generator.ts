@@ -61,7 +61,8 @@ Reply with ONLY the slug, nothing else. Examples: "vendor-pitch", "api-design", 
       prompt,
       provider,
       model,
-      timeoutMs: 15_000, // 15 second timeout
+      timeoutMs:
+        (params.cfg.agents?.defaults?.llm?.slugGeneratorTimeoutSeconds ?? 15) * 1000,
       runId: `slug-gen-${Date.now()}`,
     });
 
